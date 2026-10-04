@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voyages en Inde – Les soins d'Alice</title>
+<meta name="description" content="Retraite Holi 2027 en Inde du Nord avec Alice, du 12 au 26 mars 2027 : Taj Mahal, Amritsar, Dharamshala, Rishikesh, yoga, silence et fête des couleurs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --creme:#FBF7EF; --sable:#F2E8D6; --sable-fonce:#E6D6B8;
+    --or:#B8893A; --or-clair:#D9B76E; --bronze:#8A5A2B; --texte:#4A3726;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--creme);color:var(--texte);font-family:'Cormorant Garamond',Georgia,serif;font-size:1.2rem;line-height:1.7}
+  img{max-width:100%;display:block}
+  a{color:var(--bronze)}
+  a:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+
+  nav{position:sticky;top:0;z-index:10;background:rgba(251,247,239,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--sable-fonce)}
+  nav ul{list-style:none;margin:0 auto;padding:.7rem 1rem;display:flex;flex-wrap:wrap;justify-content:center;gap:.3rem 1.4rem;max-width:1100px}
+  nav a{text-decoration:none;color:var(--texte);font-size:1.05rem}
+  nav a:hover,nav a[aria-current]{color:var(--or)}
+  nav a[aria-current]{border-bottom:1px solid var(--or)}
+
+  h1,h2{font-family:'Great Vibes',cursive;font-weight:400;color:var(--or);line-height:1.15;margin:0 0 .3em}
+  h1{font-size:clamp(3.4rem,12vw,5.8rem)}
+  h2{font-size:clamp(2.6rem,8vw,3.6rem)}
+  h3{font-weight:600;color:var(--bronze);font-size:1.4rem;margin:0 0 .2em;line-height:1.3}
+  .orne{color:var(--or-clair);letter-spacing:.6em;margin:0}
+  .centre{text-align:center}
+  section{padding:4rem 1.2rem}
+  .bande{background:var(--sable)}
+  .cadre{max-width:1040px;margin:0 auto}
+  .texte{max-width:38rem}
+
+  .btn{display:inline-block;padding:.75rem 1.7rem;border-radius:999px;text-decoration:none;font-size:1.15rem;border:1px solid var(--or);transition:background .2s,color .2s}
+  .btn-plein{background:var(--or);color:#fff}
+  .btn-plein:hover{background:var(--bronze);border-color:var(--bronze)}
+  .btn-contour{color:var(--bronze)}
+  .btn-contour:hover{background:var(--or);color:#fff}
+  .boutons{display:flex;flex-wrap:wrap;gap:.8rem}
+
+  /* Ouverture */
+  .ouverture{display:grid;gap:2rem;align-items:center;padding:2.5rem 1.2rem 3.5rem}
+  .ouverture .photo{border-radius:200px 200px 14px 14px;overflow:hidden;max-width:440px;margin:0 auto;width:100%;box-shadow:0 10px 30px rgba(138,90,43,.2)}
+  .ouverture .photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .dates{display:inline-block;border-top:1px solid var(--or-clair);border-bottom:1px solid var(--or-clair);padding:.35rem 0;margin:.2rem 0 1.2rem;font-size:1.3rem;color:var(--bronze);font-style:italic}
+  .ouverture p.accroche{font-size:1.35rem;margin:0 0 1.6rem}
+
+  /* Récit */
+  .recit{display:grid;gap:2.2rem;align-items:center}
+  .recit img{border-radius:14px;width:100%;max-width:380px;height:auto;margin:0 auto}
+  blockquote.papa{margin:1.2rem 0;padding-left:1.1rem;border-left:2px solid var(--or-clair);font-style:italic;font-size:1.3rem;color:var(--bronze)}
+
+  /* Étapes */
+  .etapes{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.4rem 1rem;margin-top:2.2rem}
+  .etape img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:50% 50% 12px 12px}
+  .etape h3{margin-top:.8rem}
+  .etape p{margin:0;font-size:1.12rem}
+
+  /* Holi */
+  .holi{display:grid;gap:2.2rem;align-items:center}
+  .holi img{width:100%;max-width:320px;margin:0 auto;border-radius:14px;aspect-ratio:3/4;object-fit:cover}
+
+  /* Au programme */
+  .programme{list-style:none;padding:0;margin:1.8rem 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.4rem 2.4rem}
+  .programme li p{margin:0}
+
+  /* Tarif */
+  .tarif{background:var(--creme);border:1px solid var(--or-clair);border-radius:18px;padding:2.2rem 1.5rem;max-width:40rem;margin:0 auto;text-align:center}
+  .prix{font-family:'Great Vibes',cursive;font-size:4rem;color:var(--or);line-height:1;margin:.3rem 0}
+  .tarif ul{text-align:left;margin:1.4rem auto 0;padding:0;list-style:none}
+  .tarif li{padding-left:1.6rem;position:relative;margin-bottom:.6rem}
+  .tarif li::before{content:"✦";position:absolute;left:0;top:.2rem;color:var(--or);font-size:.85rem}
+  .note{font-style:italic;font-size:1.08rem;margin:1.2rem 0 0}
+
+  /* Témoignages */
+  .temoignages{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.6rem;margin-top:2rem}
+  figure.avis{margin:0;background:var(--creme);border-radius:16px;padding:1.6rem 1.5rem 1.3rem;position:relative}
+  figure.avis::before{content:"“";font-family:'Great Vibes',cursive;font-size:4.5rem;color:var(--or-clair);position:absolute;top:-.6rem;left:1rem;line-height:1}
+  figure.avis blockquote{margin:.8rem 0 .8rem;font-style:italic}
+  figure.avis figcaption{color:var(--bronze);font-weight:600}
+  .etoiles{color:var(--or);letter-spacing:.15em;font-size:.95rem;font-weight:400;margin-left:.4rem}
+
+  .contact{text-align:center}
+  .contact .boutons{justify-content:center}
+  footer{text-align:center;padding:1rem 1rem 3rem;font-size:1.05rem}
+
+  @media (min-width:800px){
+    .ouverture{grid-template-columns:1fr 1fr;max-width:1040px;margin:0 auto;padding-top:4rem}
+    .recit{grid-template-columns:2fr 3fr}
+    .holi{grid-template-columns:3fr 2fr}
+  }
+  @media (max-width:799px){
+    .ouverture .texte-ouverture{text-align:center}
+    .ouverture .boutons{justify-content:center}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Menu principal">
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="index.html#prestations">Soins</a></li>
+    <li><a href="bougies.html">Bougies</a></li>
+    <li><a href="voyages.html" aria-current="page">Voyages en Inde</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="ouverture">
+  <div class="photo"><img src="voyage-taj-alice.jpg" alt="Alice, bras ouverts, devant le Taj Mahal" width="644" height="532"></div>
+  <div class="texte-ouverture">
+    <p class="orne">✦ ✦ ✦</p>
+    <h1>Voyages en Inde</h1>
+    <p class="dates">Retraite Holi · du 12 au 26 mars 2027</p>
+    <p class="accroche">Quinze jours en Inde du Nord pour ralentir, ressentir, méditer, célébrer… et peut-être repartir avec quelque chose de différent en soi.</p>
+    <div class="boutons">
+      <a class="btn btn-plein" href="#contact">Réserver ma place</a>
+      <a class="btn btn-contour" href="#etapes">Voir le voyage</a>
+    </div>
+  </div>
+</header>
+
+<section class="bande">
+  <div class="cadre recit">
+    <img src="voyage-priere-gange.jpg" alt="Alice en prière au bord du Gange, au milieu des lumières flottantes" width="766" height="1145" loading="lazy">
+    <div class="texte">
+      <h2>Pourquoi l'Inde</h2>
+      <p>Sur son lit de mort, mon papa m'a confié ces mots :</p>
+      <blockquote class="papa">« Ma fille, il faut que tu sois qui tu dois être sur cette terre, dans ce monde brut. »</blockquote>
+      <p>Pour l'honorer, je suis partie en voyage spirituel en Inde. C'est là-bas que j'ai compris ce que je devais mettre en lumière.</p>
+      <p>Aujourd'hui, j'ai envie de vous emmener à mon tour. Pas simplement en voyage, mais à la rencontre d'une autre façon de vivre, avec la bienveillance et l'écoute qui accompagnent chacun de mes soins.</p>
+    </div>
+  </div>
+</section>
+
+<section id="etapes">
+  <div class="cadre">
+    <h2 class="centre">Le voyage</h2>
+    <p class="centre texte" style="margin:0 auto">De Delhi aux rives sacrées du Gange, des montagnes de l'Himalaya jusqu'au majestueux Taj Mahal, une Inde authentique, spirituelle et profondément vivante.</p>
+    <div class="etapes">
+      <article class="etape">
+        <img src="voyage-amritsar.jpg" alt="Le Golden Temple d'Amritsar illuminé la nuit" width="344" height="344" loading="lazy">
+        <h3>Amritsar</h3>
+        <p>Le Golden Temple, ses reflets dorés et le repas partagé au langar.</p>
+      </article>
+      <article class="etape">
+        <img src="voyage-dharamshala.jpg" alt="Chemin de montagne et drapeaux de prières à Dharamshala" width="342" height="342" loading="lazy">
+        <h3>Dharamshala</h3>
+        <p>L'Himalaya, les monastères tibétains, les drapeaux de prières et les chemins de randonnée.</p>
+      </article>
+      <article class="etape">
+        <img src="voyage-rishikesh.jpg" alt="Cérémonie au bord du Gange à Rishikesh" width="344" height="344" loading="lazy">
+        <h3>Rishikesh</h3>
+        <p>Le Gange au lever du soleil, l'ashram, le stage de yoga Art of Living et trois jours de silence.</p>
+      </article>
+      <article class="etape">
+        <img src="voyage-agra.jpg" alt="Le Taj Mahal au coucher du soleil" width="346" height="342" loading="lazy">
+        <h3>Agra</h3>
+        <p>Le Taj Mahal, pour clore le voyage dans l'émerveillement.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="bande">
+  <div class="cadre holi">
+    <div class="texte">
+      <h2>Holi, la fête des couleurs</h2>
+      <p>Le voyage est construit autour de Holi. Se laisser emporter par la musique, les sourires et les éclats de poudre colorée : une célébration joyeuse où les barrières s'effacent et où l'on partage un moment unique avec les habitants.</p>
+      <ul class="programme">
+        <li><h3>Se poser</h3><p>Méditation, yoga et respiration, des cérémonies sacrées, des temples et des monastères.</p></li>
+        <li><h3>Rencontrer</h3><p>Un sourire, un repas partagé, un artisan, un moine, une famille croisée sur le chemin.</p></li>
+        <li><h3>Goûter</h3><p>Les épices, les marchés, le chai masala et les recettes traditionnelles.</p></li>
+        <li><h3>Se ressourcer</h3><p>Le calme d'un ashram, puis le confort d'un hôtel d'exception.</p></li>
+      </ul>
+    </div>
+    <img src="voyage-holi.jpg" alt="Enfant couvert de poudres colorées pendant la fête de Holi" width="590" height="960" loading="lazy">
+  </div>
+</section>
+
+<section>
+  <div class="tarif">
+    <h2>Ce qui est compris</h2>
+    <p class="dates">du 12 au 26 mars 2027</p>
+    <p class="prix">2 980 €</p>
+    <ul>
+      <li>Le vol international au départ de Paris Charles de Gaulle</li>
+      <li>Tous les transferts et transports en Inde (vol, trains, bus climatisé)</li>
+      <li>L'entrée de toutes les activités</li>
+      <li>Le stage complet de yoga et de méditation Art of Living à Rishikesh, avec 3 jours de silence</li>
+      <li>La pension semi-complète (quelques déjeuners restent à votre charge, sauf pendant le stage à Rishikesh où ils sont inclus)</li>
+      <li>Le logement en chambre double dans des hôtels sur tout le circuit, et en chambre partagée de 3 ou 4 personnes pendant le stage</li>
+    </ul>
+    <p class="note">Chambre simple possible en supplément · Paiement en plusieurs fois sans frais · Chèques-vacances acceptés jusqu'à 600 €</p>
+  </div>
+</section>
+
+<section class="bande">
+  <div class="cadre">
+    <h2 class="centre">Ils sont partis avec moi</h2>
+    <p class="centre" style="margin:0;font-style:italic;color:var(--bronze)">Voyage de janvier 2026</p>
+    <div class="temoignages">
+      <figure class="avis">
+        <blockquote>Lorsque je suis arrivée en Inde, j'étais encore très fermée, avec beaucoup de tristesse en moi. Tu l'as ressentie immédiatement. Je sais que ce voyage et toutes les belles rencontres que j'y ai faites m'ont profondément aidée et marquée.</blockquote>
+        <figcaption>Morgane <span class="etoiles" aria-label="5 étoiles">★★★★★</span></figcaption>
+      </figure>
+      <figure class="avis">
+        <blockquote>Elle n'est que bienveillance, amour et dévotion pour mettre ses facultés au service des autres, sans nous effrayer. Elle ne force pas à croire à quoi que ce soit.</blockquote>
+        <figcaption>Manon <span class="etoiles" aria-label="5 étoiles">★★★★★</span></figcaption>
+      </figure>
+      <figure class="avis">
+        <blockquote>C'est un rayon de soleil, elle nous transmet sa joie intérieure. Nous étions en Inde lors de ces deux soins, c'était magique.</blockquote>
+        <figcaption>Micheline <span class="etoiles" aria-label="5 étoiles">★★★★★</span></figcaption>
+      </figure>
+      <figure class="avis">
+        <blockquote>Alice, ma merveille, préserve ce que tu es, car tu es rare et précieuse.</blockquote>
+        <figcaption>Najat <span class="etoiles" aria-label="5 étoiles">★★★★★</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="cadre">
+    <img src="voyage-alice.jpg" alt="Alice en Inde, souriante, un châle coloré sur les épaules" width="430" height="890" loading="lazy" style="width:150px;height:150px;object-fit:cover;object-position:top;border-radius:50%;margin:0 auto 1.2rem;border:2px solid var(--or-clair)">
+    <h2>Envie de partir avec moi ?</h2>
+    <p style="margin:0 auto 1.6rem;max-width:32rem">Pour le programme détaillé ou pour réserver votre place, appelez-moi ou écrivez-moi.</p>
+    <div class="boutons">
+      <a class="btn btn-plein" href="tel:+33666839474">Appeler Alice · 06 66 83 94 74</a>
+      <a class="btn btn-contour" href="https://www.instagram.com/byalicefairys/" target="_blank" rel="noopener">M'écrire sur Instagram</a>
+    </div>
+    <p style="margin-top:1.4rem">Basée à Marseille</p>
+  </div>
+</section>
+
+<footer><a href="index.html">Retour aux soins d'Alice</a></footer>
+</body>
+</html>
